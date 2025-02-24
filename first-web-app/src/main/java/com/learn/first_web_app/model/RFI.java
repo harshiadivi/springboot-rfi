@@ -1,5 +1,5 @@
 package com.learn.first_web_app.model;
-
+import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 
 @Entity
@@ -7,9 +7,7 @@ import jakarta.persistence.*;
 public class RFI {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
     private String description;
     private String status;
@@ -18,7 +16,8 @@ public class RFI {
     public RFI() {}
 
     // Parameterized Constructor
-    public RFI(String title, String description, String status) {
+    public RFI(Long id, String title, String description, String status) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.status = status;
