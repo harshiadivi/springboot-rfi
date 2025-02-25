@@ -11,16 +11,18 @@ public class RFI {
     private String subject;
     private String question;
     private String status;
+    private Integer companyId;
 
     // Default constructor (Required by JPA)
     public RFI() {}
 
     // Parameterized Constructor
-    public RFI(Long id, String subject, String question, String status) {
+    public RFI(Long id, String subject, String question, String status , Integer companyId) {
         this.id = id;
         this.subject = subject;
         this.question = question;
         this.status = status;
+        this.companyId = companyId;
     }
 
     // Getters and Setters
@@ -35,4 +37,7 @@ public class RFI {
 
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+
+    public Integer getCompanyId() { return companyId; }
+    public void setCompanyId(Integer companyId) { this.companyId = companyId; }
 }

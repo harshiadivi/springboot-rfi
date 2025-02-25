@@ -21,6 +21,11 @@ public class RFIController {
         return service.getAllRFIs();
     }
 
+    @GetMapping("/subject/{subject}")
+    public List<RFI> getRFIsBySubject(@PathVariable String subject) {
+        return service.getRFIsBySubject(subject);
+    }
+
     // Get RFI by ID
     //Extracts {id} from the URL and passes it to the method.
     @GetMapping("/{id}")
@@ -28,11 +33,18 @@ public class RFIController {
         return service.getRFIById(id);
     }
 
+    @GetMapping("/company/{companyId}")
+    public List<RFI> getRFIBycompanyId(@PathVariable Integer companyId) {
+        return service.getRFIBycompanyId(companyId);
+    }
+
     // Add a new RFI
     @PostMapping
     public RFI addRFI(@RequestBody RFI rfi) {
         return service.addRFI(rfi);
     }
+
+
 
     // Update an existing RFI
     @PutMapping
@@ -45,4 +57,7 @@ public class RFIController {
     public void deleteRFI(@PathVariable Long id) {
         service.deleteRFI(id);
     }
+
+
+
 }

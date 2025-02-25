@@ -24,6 +24,14 @@ public class RFIService {
         return rfiRepository.findById(id);
     }
 
+    public List <RFI> getRFIBycompanyId(Integer companyId) {
+        return rfiRepository.findBycompanyId(companyId);
+    }
+
+    public List<RFI> getRFIsBySubject(String subject) {
+        return rfiRepository.findBySubject(subject);
+    }
+
     // Create a new RFI
     public RFI addRFI(RFI rfi) {
         return rfiRepository.save(rfi);
@@ -45,4 +53,7 @@ public class RFIService {
     public void deleteRFI(Long id) {
         rfiRepository.deleteById(id);
     }
+
+
+
 }

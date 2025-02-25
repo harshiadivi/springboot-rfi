@@ -1,0 +1,25 @@
+<changelist name="Uncommitted_changes_before_Update_at_25_02_25,_9_53 pm_[Changes]" date="1740500617120" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_02_25,_9_53 pm_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25/02/25, 9:53 pm [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/controller/RFIController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/controller/HomeController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/controller/LoginController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/model/RFI.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/FirstWebAppApplication.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/repository/RFIRepo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="first-web-app/target/classes/com/learn/first_web_app/service/RFIService.class" />
+  </binary>
+</changelist>
