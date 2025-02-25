@@ -8,18 +8,18 @@ public class RFI {
 
     @Id
     private Long id;
-    private String title;
-    private String description;
+    private String subject;
+    private String question;
     private String status;
 
     // Default constructor (Required by JPA)
     public RFI() {}
 
     // Parameterized Constructor
-    public RFI(Long id, String title, String description, String status) {
+    public RFI(Long id, String subject, String question, String status) {
         this.id = id;
-        this.title = title;
-        this.description = description;
+        this.subject = subject;
+        this.question = question;
         this.status = status;
     }
 
@@ -27,11 +27,11 @@ public class RFI {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getSubject() { return subject; }
+    public void setSubject(String subject) { this.subject = subject; }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getQuestion() { return question; }
+    public void setQuestion(String question) { this.question = question; }
 
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }

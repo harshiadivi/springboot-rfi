@@ -33,8 +33,8 @@ public class RFIService {
     public RFI updateRFI(RFI updatedRFI) {
         return rfiRepository.findById(updatedRFI.getId())
                 .map(existingRFI -> {
-                    existingRFI.setTitle(updatedRFI.getTitle());
-                    existingRFI.setDescription(updatedRFI.getDescription());
+                    existingRFI.setSubject(updatedRFI.getSubject());
+                    existingRFI.setQuestion(updatedRFI.getQuestion());
                     existingRFI.setStatus(updatedRFI.getStatus());
                     return rfiRepository.save(existingRFI);
                 })
