@@ -1,43 +1,23 @@
 package com.learn.first_web_app.model;
-import jakarta.persistence.Entity;
+
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "rfis")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class RFI {
 
     @Id
-    private Long id;
+    private Long id; // Removed @GeneratedValue
+
     private String subject;
     private String question;
     private String status;
+
+    @Column(name = "company_id")
     private Integer companyId;
-
-    // Default constructor (Required by JPA)
-    public RFI() {}
-
-    // Parameterized Constructor
-    public RFI(Long id, String subject, String question, String status , Integer companyId) {
-        this.id = id;
-        this.subject = subject;
-        this.question = question;
-        this.status = status;
-        this.companyId = companyId;
-    }
-
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getSubject() { return subject; }
-    public void setSubject(String subject) { this.subject = subject; }
-
-    public String getQuestion() { return question; }
-    public void setQuestion(String question) { this.question = question; }
-
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
-
-    public Integer getCompanyId() { return companyId; }
-    public void setCompanyId(Integer companyId) { this.companyId = companyId; }
 }

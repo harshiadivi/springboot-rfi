@@ -1,5 +1,5 @@
 package com.learn.first_web_app.service;
-
+import lombok.RequiredArgsConstructor;
 import com.learn.first_web_app.model.RFI;
 import com.learn.first_web_app.repository.RFIRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,22 +9,24 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor // Lombok generates a constructor for final fields
 public class RFIService {
 
-    @Autowired
-    private RFIRepo rfiRepository;
+    private final RFIRepo rfiRepository;
 
-    // Get all RFIs
     public List<RFI> getAllRFIs() {
-        return rfiRepository.findAll();
+        List<RFI> rfis = rfiRepository.findAll();
+        System.out.println("RFIs from DB: " + rfis);
+        return rfis;
     }
+
 
     // Get an RFI by ID
     public Optional<RFI> getRFIById(Long id) {
         return rfiRepository.findById(id);
     }
 
-    public List <RFI> getRFIBycompanyId(Integer companyId) {
+    public List <RFI> getRFIByCompanyId(Integer companyId) {
         return rfiRepository.findBycompanyId(companyId);
     }
 

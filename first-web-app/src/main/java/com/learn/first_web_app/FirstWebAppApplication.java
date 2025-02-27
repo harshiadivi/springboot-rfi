@@ -1,19 +1,23 @@
 package com.learn.first_web_app;
-
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
-//@Configuration → Defines this class as a configuration class.
-//@EnableAutoConfiguration → Automatically configures Spring Boot based on dependencies.
-//@ComponentScan → Scans the package for Spring components (like Controllers and Services).
 @SpringBootApplication
-public class FirstWebAppApplication {
+public class FirstWebAppApplication implements CommandLineRunner {
+
+	@Value("${spring.datasource.url}")
+	private String databaseUrl;
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(FirstWebAppApplication.class, args);
 	}
 
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("Connected to database: " + databaseUrl);
+	}
 }
